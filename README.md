@@ -11,7 +11,7 @@ Inspiration based on [this blog post](https://life.craftz.dog/entry/record-my-ro
 ## Requirements
 - Go 1.13+
 - Raspberry Pi (I used Model 3)
-- [ANAVI Infrared pHAT](https://www.crowdsupply.com/anavi-technology/infrared-phat)
+- [ANAVI Infrared pHAT](https://www.crowdsupply.com/anavi-technology/infrared-phat) - **Advanced Kit** 
 - Cloud Firestore (Firebase) 
 
 ## Installation
