@@ -20,6 +20,14 @@ Inspiration based on [this blog post](https://life.craftz.dog/entry/record-my-ro
 go get github.com/jumbosushi/pi-room
 ```
 
+## Development
+
+```
+git clone https://github.com/jumbosushi/pi-room.git
+cd pi-room
+make
+```
+
 ## Usage
 
 ### 1. Set up Raspberry Pi
@@ -28,11 +36,13 @@ I recommend [this tutorial](https://desertbot.io/blog/headless-raspberry-pi-3-bp
 
 ### 2. Set up Cloud Firestore
 
-Follow Firebase's [official doc](https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup) to create a service account. Down load the account's key file in to your path and update the path near `TODO` in `main.go`
+Follow Firebase's [official doc](https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup) to create a service account. Download the account's key file on your pi and update the path under `TODO` in `main.go`
 
 ### 3. Download anavi scripts
 
-Clone [anavi-examples](https://github.com/AnaviTechnology/anavi-examples) repo within the pi at the home directory (`/home/pi`). Run `make` in the following directories:
+Clone the [anavi-examples](https://github.com/AnaviTechnology/anavi-examples) repo in your pi at the home directory (`/home/pi`). 
+
+Run `make` in the following directories:
 - `sensors/HTU21D/c`
 - `sensors/BMP180/c`
 - `sensors/BH1750/c`

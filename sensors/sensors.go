@@ -80,5 +80,4 @@ func GetLight() (light float64, err error) {
 	}
 
 	return
-
 }
