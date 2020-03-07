@@ -22,7 +22,7 @@ type RoomData struct {
 func recordData(roomData *RoomData) {
 	ctx := context.Background()
 	// TODO: Change the path to your key file
-	opt := option.WithCredentialsFile("~/pi-room-key.json")
+	opt := option.WithCredentialsFile("/home/pi/pi-room-key.json")
 	app, err := firebase.NewApp(ctx, nil, opt)
 	if err != nil {
 		log.Fatalln(err)
