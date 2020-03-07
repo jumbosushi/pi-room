@@ -15,4 +15,4 @@
 # vendor/
 
 # Remove executable
-./bin/pi-room
+bin/pi-room
