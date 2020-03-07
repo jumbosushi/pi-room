@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./sensors"
+	"github.com/jumbosushi/pi-room/sensors"
 
 	"context"
 	"log"
@@ -38,7 +38,7 @@ func recordData(roomData *RoomData) {
 
 	_, _, err = collection.Add(ctx, map[string]interface{}{
 		"createdAt":   time.Now(),
-		"temperature": roomData.temperature,
+		"temperature": roomData.temp,
 		"humidity":    roomData.humidity,
 		"pressure":    roomData.pressure,
 		"light":       roomData.light,
@@ -51,23 +51,23 @@ func recordData(roomData *RoomData) {
 func main() {
 	log.Println("Starting pi-room ...")
 
-	temperature1, _ := sensors.GetTemp()
-	log.Printf("Temperature:  %f C\n", temperature1)
+	temp, _ := sensors.GetTemp()
+	log.Printf("Temperature:  %f C\n", temp)
 
-	temperature1, _ := sensors.GetHumidity()
+	humidity, _ := sensors.GetHumidity()
 	log.Printf("Humidity:     %f %%rh\n", humidity)
 
 	light, _ := sensors.GetLight()
 	log.Printf("Light:        %f Lux\n", light)
 
-	pressure, _ := sensors.GetTempAndPressure()
+	pressure, _ := sensors.GetPressure()
 	log.Printf("Pressure:     %f %%rh\n", pressure)
 
 	data := RoomData{
-		temperature: temperature1,
-		pressure:    pressure,
-		humidity:    humidity,
-		light:       light,
+		temp:     temp,
+		pressure: pressure,
+		humidity: humidity,
+		light:    light,
 	}
 
 	recordData(&data)
